@@ -1,0 +1,43 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "test",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column_list": [
+          "Age",
+          "Income",
+          "Prior_Claims"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "max_value": 10,
+        "min_value": 10
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "citations": [
+      {
+        "batch_request": {
+          "data_asset_name": "example_data.csv",
+          "data_connector_name": "default_inferred_data_connector_name",
+          "datasource_name": "my_datasource",
+          "limit": 1000
+        },
+        "citation_date": "2021-10-15T18:03:16.165509Z",
+        "comment": "Created suite added via CLI"
+      }
+    ],
+    "great_expectations_version": "0.13.37"
+  }
+}
