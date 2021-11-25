@@ -1,0 +1,16 @@
+# Great Expectations Script Config #
+# 1. Data Source
+datasource_name: "data_drift"
+datasource_path: "../data"
+overwrite: True
+
+# 2. Expectation Suite
+expectation_suite_name: "data_drift_detection"
+expectation_data: "example_data.csv"
+categorical_variables: ["Prior_Claims"]
+continuous_variables: ["Age", "Income"]
+data_docs: True
+
+# 3. Checkpoint
+checkpoint_name: "checkpoint"
+checkpoint_data: "example_data_for_validation.csv"

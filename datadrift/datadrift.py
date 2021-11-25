@@ -114,4 +114,3 @@ class DataDriftDetection(object):
         ks_stat, ks_p_val = scipy.stats.ks_2samp(self.past_data[feature], self.new_data[feature])
         print("KS Statistic: {}, p-value: {}".format(ks_stat, ks_p_val))
         return ks_stat, ks_p_val
-        

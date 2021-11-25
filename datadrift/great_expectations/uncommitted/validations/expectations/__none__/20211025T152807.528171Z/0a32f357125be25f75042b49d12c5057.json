@@ -1,0 +1,814 @@
+{
+  "evaluation_parameters": {},
+  "meta": {
+    "active_batch_definition": {
+      "batch_identifiers": {},
+      "data_asset_name": "example_data.csv",
+      "data_connector_name": "default_inferred_data_connector_name",
+      "datasource_name": "my_datasource"
+    },
+    "batch_markers": {
+      "ge_load_time": "20211025T192807.569159Z",
+      "pandas_data_fingerprint": "ac8853b6ef70841239ea83771c850981"
+    },
+    "batch_spec": {
+      "path": "/Users/samsonqian/Documents/GitHub/datadrift/great_expectations/../data/example_data.csv"
+    },
+    "expectation_suite_name": "expectations",
+    "great_expectations_version": "0.13.37",
+    "run_id": {
+      "run_name": null,
+      "run_time": "2021-10-25T15:28:07.528171+00:00"
+    },
+    "validation_time": "20211025T192807.598313Z"
+  },
+  "results": [
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_columns_to_match_ordered_list",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column_list": [
+            "Age",
+            "Income",
+            "Prior_Claims"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": [
+          "Age",
+          "Income",
+          "Prior_Claims"
+        ]
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_table_row_count_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "max_value": 10,
+          "min_value": 10
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 10
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "max_value": 23,
+          "min_value": 23
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 23
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "max_value": 67,
+          "min_value": 67
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 67
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "max_value": 45.0,
+          "min_value": 45.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 45.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "max_value": 39.5,
+          "min_value": 39.5
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 39.5
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "allow_relative_error": "lower",
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "quantile_ranges": {
+            "quantiles": [
+              0.05,
+              0.25,
+              0.5,
+              0.75,
+              0.95
+            ],
+            "value_ranges": [
+              [
+                23,
+                23
+              ],
+              [
+                34,
+                34
+              ],
+              [
+                34,
+                34
+              ],
+              [
+                56,
+                56
+              ],
+              [
+                67,
+                67
+              ]
+            ]
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "values": [
+            23,
+            34,
+            34,
+            56,
+            67
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "value_set": [
+            23,
+            34,
+            45,
+            56,
+            67
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "max_value": 0.5,
+          "min_value": 0.5
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.5
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Age",
+          "type_list": [
+            "INTEGER",
+            "integer",
+            "int",
+            "int_",
+            "int8",
+            "int16",
+            "int32",
+            "int64",
+            "uint8",
+            "uint16",
+            "uint32",
+            "uint64",
+            "INT",
+            "INTEGER",
+            "INT64",
+            "TINYINT",
+            "BYTEINT",
+            "SMALLINT",
+            "BIGINT",
+            "IntegerType",
+            "LongType"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_min_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "max_value": 12345,
+          "min_value": 12345
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 12345
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_max_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "max_value": 102000,
+          "min_value": 102000
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 102000
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_mean_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "max_value": 54384.5,
+          "min_value": 54384.5
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 54384.5
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_median_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "max_value": 45306.0,
+          "min_value": 45306.0
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 45306.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_quantile_values_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "allow_relative_error": "lower",
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "quantile_ranges": {
+            "quantiles": [
+              0.05,
+              0.25,
+              0.5,
+              0.75,
+              0.95
+            ],
+            "value_ranges": [
+              [
+                12345,
+                12345
+              ],
+              [
+                34000,
+                34000
+              ],
+              [
+                45000,
+                45000
+              ],
+              [
+                67888,
+                67888
+              ],
+              [
+                100000,
+                100000
+              ]
+            ]
+          }
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "details": {
+          "success_details": [
+            true,
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        "observed_value": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "values": [
+            12345,
+            34000,
+            45000,
+            67888,
+            100000
+          ]
+        }
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "value_set": [
+            12345,
+            25000,
+            34000,
+            45000,
+            45612,
+            67888,
+            78000,
+            100000,
+            102000
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "max_value": 0.9,
+          "min_value": 0.9
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.9
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Income",
+          "type_list": [
+            "INTEGER",
+            "integer",
+            "int",
+            "int_",
+            "int8",
+            "int16",
+            "int32",
+            "int64",
+            "uint8",
+            "uint16",
+            "uint32",
+            "uint64",
+            "INT",
+            "INTEGER",
+            "INT64",
+            "TINYINT",
+            "BYTEINT",
+            "SMALLINT",
+            "BIGINT",
+            "IntegerType",
+            "LongType"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": "int64"
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_set",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Prior_Claims",
+          "value_set": [
+            "No",
+            "Yes"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_not_be_null",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Prior_Claims"
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Prior_Claims",
+          "max_value": 0.2,
+          "min_value": 0.2
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "observed_value": 0.2
+      },
+      "success": true
+    },
+    {
+      "exception_info": {
+        "exception_message": null,
+        "exception_traceback": null,
+        "raised_exception": false
+      },
+      "expectation_config": {
+        "expectation_type": "expect_column_values_to_be_in_type_list",
+        "ge_cloud_id": null,
+        "kwargs": {
+          "batch_id": "0a32f357125be25f75042b49d12c5057",
+          "column": "Prior_Claims",
+          "type_list": [
+            "CHAR",
+            "NCHAR",
+            "VARCHAR",
+            "NVARCHAR",
+            "TEXT",
+            "NTEXT",
+            "STRING",
+            "StringType",
+            "string",
+            "str",
+            "object",
+            "dtype('O')"
+          ]
+        },
+        "meta": {}
+      },
+      "meta": {},
+      "result": {
+        "element_count": 10,
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": null,
+        "partial_unexpected_list": [],
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "unexpected_percent_total": 0.0
+      },
+      "success": true
+    }
+  ],
+  "statistics": {
+    "evaluated_expectations": 24,
+    "success_percent": 100.0,
+    "successful_expectations": null,
+    "unsuccessful_expectations": null
+  },
+  "success": true
+}
