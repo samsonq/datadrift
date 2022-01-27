@@ -1,0 +1,58 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "data_drift_detection",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "max_value": 173610,
+        "min_value": 100000
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "feature_6",
+        "max_value": 1.0,
+        "min_value": 1.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "feature_6",
+        "max_value": 5.0,
+        "min_value": 5.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_kl_divergence_to_be_less_than",
+      "ge_cloud_id": null,
+      "kwargs": {
+        "column": "feature_6",
+        "partition_object": {
+          "values": [
+            0,
+            1
+          ],
+          "weights": [
+            0.5,
+            0.5
+          ]
+        },
+        "threshold": 0.05
+      },
+      "meta": {}
+    }
+  ],
+  "ge_cloud_id": null,
+  "meta": {
+    "great_expectations_version": "0.13.37"
+  }
+}

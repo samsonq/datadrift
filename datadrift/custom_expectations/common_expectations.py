@@ -30,10 +30,7 @@ class CommonExpectations():
             "meta": {},
             "kwargs": {
                 "column": self.feature,
-                "partition_object": {
-                    "values": self.bins["values"],
-                    "weights": self.bins["weights"]
-                },
+                "partition_object": self.bins,
                 "threshold": threshold
             }
         })

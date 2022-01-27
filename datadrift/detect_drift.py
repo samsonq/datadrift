@@ -227,7 +227,7 @@ def create_ge_checkpoint(checkpoint_name="checkpoint",
 
 
 def detect_drift():
-    ge_config = yaml.load(open("ge_config.yaml", "r"))
+    ge_config = yaml.load(open("config.yaml", "r"))
     # args = parse_args()  # inputted arguments
 
     # context = ge.data_context.DataContext()
@@ -260,7 +260,10 @@ def detect_drift():
                          data_docs=ge_config["data_docs"])
 
     # Parse GE Results
-    parse_ge_results()
+    newest = lambda path: max([os.path.join(path, basename) for basename in os.listdir(path)], key=os.path.getctime)
+    path_to_json = newest(newest(newest(os.path.join("./great_expectations", "uncommitted", "validations", ge_config["expectation_suite_name"]))))
+    parse_ge_results(path=path_to_json, 
+                     save_path=ge_config["parsed_validations_path"])
 
 
 if __name__ == "__main__":

@@ -40,7 +40,8 @@ def parse_ge_results(path, save_path="."):
                 exceptions[feature_name] = [test]
             else:
                 ge_results[feature_name].append(test)
-        if not expectation["success"]:
+        #if not expectation["success"]:
+        else:
             try:
                 expected_value = [expectation["expectation_config"]["kwargs"]["min_value"],
                                   expectation["expectation_config"]["kwargs"]["max_value"]]
@@ -48,16 +49,17 @@ def parse_ge_results(path, save_path="."):
             except:
                 expected_value = "TBD"
                 observed_value = "TBD"
+            result = "Failed" if not expectation["success"] else "Success"
             if feature_name not in ge_results.keys():
-                ge_results[feature_name] = [[test, expected_value, observed_value]]
+                ge_results[feature_name] = [[test, expected_value, observed_value, result]]
             else:
-                ge_results[feature_name].append([test, expected_value, observed_value])
+                ge_results[feature_name].append([test, expected_value, observed_value, result])
 
-    results = pd.DataFrame({"Feature": [], "Test": [], "Type": [], "Expected": [], "Actual": []})
+    results = pd.DataFrame({"Feature": [], "Test": [], "Result": [], "Expected": [], "Actual": []})
     print("Extracting expectation results from JSON...")
     for feature, tests in tqdm(ge_results.items(), total=len(ge_results)):
         for test in tests:
-            results.loc[len(results)] = [feature, test[0], "Failed", test[1], test[2]]
+            results.loc[len(results)] = [feature, test[0], test[3], test[1], test[2]]
 
     for feature, tests in tqdm(exceptions.items(), total=len(exceptions)):
         for test in tests:
